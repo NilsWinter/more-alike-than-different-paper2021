@@ -18,6 +18,8 @@ from pipeline.steps.data.connectome_data import DTIData, RestingStateData
 from pipeline.steps.data.attractor_data import AttractorData
 from pipeline.steps.data.clinical_data import ClinicalData
 from pipeline.steps.data.extract import Extractor
+from pipeline.steps.data.protect_ad import ProtectADData
+
 
 from pipeline.steps.statistics.anova import Anova
 from pipeline.steps.statistics.spm_glm_step import SpmGlmStep

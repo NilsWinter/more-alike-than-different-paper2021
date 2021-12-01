@@ -1,0 +1,35 @@
+setup:
+  analysis_name: "Contrast 0002"
+  result_dir: "../results/protect_ad/"
+  filter_name:
+    partial: "filter_all"
+data:
+  class: ProtectADData
+  params:
+    contrast: 0
+    skip: False
+SPM:
+  class: SpmGlmStep
+  params:
+    overwrite: True
+    matlab_path: "/spm-data/it-share/public-applications/MATLAB/R2019a/bin/matlab"
+    spm_path: "/spm-data/vault-data3/mmll/software/spm12_uncompiled/spm12"
+    type: 'functional'
+    tfce_perms: 16
+    correction_method: 'RandomField'
+    load_existing: False
+    skip: False
+statistics:
+  class: Anova
+  params:
+    method: "anova_bootstrapped_es"
+    group_contrast: 'C(Group, Sum)'
+    covariates: []
+    ss_type: 3
+    n_bootstrap: 1000
+    skip: False
+plot:
+  class: PipelinePlot
+  params:
+    group_variable: 'Group'
+    skip: False
