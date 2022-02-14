@@ -1,0 +1,26 @@
+setup:
+  analysis_name: "Mikrobiom"
+  result_dir: "../results/mikrobiom/"
+  filter_name:
+    - "filter_hc_mdd"
+    - "filter_hc_bd"
+    - "filter_mdd_bd"
+data:
+  class: Mikrobiom
+  params:
+    level: 'genus'
+    skip: False
+statistics:
+  class: Anova
+  params:
+    method: "mass_anova"
+    group_contrast: 'C(Group, Sum)'
+    covariates: ['Site', 'Alter', 'Geschlecht']
+    ss_type: 3
+    n_bootstrap: 1000
+    skip: False
+plot:
+  class: PipelinePlot
+  params:
+    group_variable: 'Group'
+    skip: False

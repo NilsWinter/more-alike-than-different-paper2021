@@ -157,6 +157,8 @@ class AnovaES:
         for x in tqdm(x_names):
             try:
                 aov = self.anova_es(x)
+                if np.isnan(aov['p-unc'][self.group_contrast]):
+                    raise ValueError("NaN p value")
                 pvals.append(aov['p-unc'][self.group_contrast])
                 fvals.append(aov['F'][self.group_contrast])
             except BaseException as e:

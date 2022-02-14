@@ -518,8 +518,7 @@ class SummaryPlotMatplotlib(PipelineStep):
 
                 sns.kdeplot(data=df, x="residuals", hue="Group",
                             fill=True, common_norm=False,
-                            alpha=.5, linewidth=0, ax=kdeax, legend=False,
-                            hue_order=['MDD', 'HC'])
+                            alpha=.5, linewidth=0, ax=kdeax, legend=False)
 
                 kdeax.set_facecolor('#F0F0F0')
                 if cnt == 1:
@@ -532,8 +531,8 @@ class SummaryPlotMatplotlib(PipelineStep):
                     c1 = (c1[0], c1[1], c1[2], 0.5)
                     c2 = sns.color_palette()[1]
                     c2 = (c2[0], c2[1], c2[2], 0.5)
-                    handles = [mpatches.Patch(facecolor=c1, label="MDD"),
-                               mpatches.Patch(facecolor=c2, label="HC")]
+                    handles = [mpatches.Patch(facecolor=c1, label="Non-Responder"),
+                               mpatches.Patch(facecolor=c2, label="Responder")]
                     kdeax.legend(handles=handles, loc='upper right', bbox_to_anchor=(1.6, 1.5), prop={'size': 5},
                                  frameon=False)
 

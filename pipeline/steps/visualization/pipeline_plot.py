@@ -16,7 +16,10 @@ class PipelinePlot(PipelineStep):
             best = self.pipeline.X_best
         best_names = self.pipeline.X_names[best[0]]
         aov = pd.read_csv(os.path.join(self.pipeline.result_dir, 'anova_results.csv'))
-        residuals = pd.read_csv(os.path.join(self.pipeline.result_dir, 'residuals.csv'), index_col='Proband')
+        try:
+            residuals = pd.read_csv(os.path.join(self.pipeline.result_dir, 'residuals.csv'), index_col='Proband')
+        except:
+            residuals = pd.read_csv(os.path.join(self.pipeline.result_dir, 'residuals.csv'), index_col='Unnamed: 0')
 
         # drop NaNs
         df = df.dropna(subset=[best_names])

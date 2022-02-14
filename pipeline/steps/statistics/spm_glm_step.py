@@ -28,10 +28,10 @@ class SpmGlmStep(PipelineStep):
                 model.add_factor('Group', self.pipeline.X_names[0])
             else:
                 model.add_factor(group_variable, self.pipeline.X_names[0])
-            model.add_continuous_covariate('Alter')
-            model.add_categorical_covariate('Geschlecht')
-            model.add_continuous_covariate('Dummy_BC_MR_pre')
-            model.add_continuous_covariate('Dummy_BC_MR_post')
+            #model.add_continuous_covariate('Alter')
+            #model.add_categorical_covariate('Geschlecht')
+            #model.add_continuous_covariate('Dummy_BC_MR_pre')
+            #model.add_continuous_covariate('Dummy_BC_MR_post')
             if type == 'structural':
                 model.add_continuous_covariate('TIV')
 

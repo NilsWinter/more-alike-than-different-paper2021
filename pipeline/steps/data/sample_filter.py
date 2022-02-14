@@ -33,7 +33,7 @@ class SampleFilter:
             func = getattr(self, filter_name)
             df['Group'] = df['Group'].replace({1: 'HC', 2: 'MDD',
                                                3: 'BD', 4: 'SA',
-                                               5: 'SZ'})
+                                               5: 'SZ', 7: 'Case'})
             return func(df)
 
     @staticmethod

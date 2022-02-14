@@ -1,11 +1,11 @@
 setup:
-  analysis_name: "Contrast 0002"
+  analysis_name: "Contrast 0010"
   result_dir: "../results/protect_ad/"
   filter_name: "filter_all"
 data:
   class: ProtectADData
   params:
-    contrast: 0
+    contrast: 6
     skip: False
 SPM:
   class: SpmGlmStep

@@ -1,8 +1,8 @@
 setup:
-  analysis_name: "Hariri"
+  analysis_name: "Contrast 0002"
   result_dir: "../results/all/"
   filter_name:
-    - "filter_hc_mdd"
+    - "filter_all"
 plot:
   class: SummaryPlotMatplotlib
   params:
@@ -10,27 +10,33 @@ plot:
     plot_p_values: False
     use_sample_filter: False
     result_folder_analyses:
-      - '../results/hariri/Hariri Faces/hc_mdd'
-      - '../results/hariri/Hariri Faces/hc_mdd_acute'
-      - '../results/hariri/Hariri Faces/hc_mdd_severe'
-      - '../results/hariri/Hariri Faces/hc_mdd_male'
-      - '../results/hariri/Hariri Faces/hc_mdd_female'
-      - '../results/hariri/Hariri Faces/hc_mdd_marburg'
-      - '../results/hariri/Hariri Faces/hc_mdd_muenster'
+      - '../results/protect_ad/Contrast 0002/all'
+      - '../results/protect_ad/Contrast 0003/all'
+      - '../results/protect_ad/Contrast 0004/all'
+      - '../results/protect_ad/Contrast 0005/all'
+      - '../results/protect_ad/Contrast 0006/all'
+      - '../results/protect_ad/Contrast 0007/all'
+      - '../results/protect_ad/Contrast 0010/all'
+      - '../results/protect_ad/Contrast 0012/all'
+      - '../results/protect_ad/Contrast 0014/all'
     modality_names:
-      - 'HC vs MDD'
-      - 'HC vs acute MDD'
-      - 'HC vs chronic MDD'
-      - 'HC vs MDD (male)'
-      - 'HC vs MDD (female)'
-      - 'HC vs MDD (Marburg)'
-      - 'HC vs MDD (Muenster)'
+      - 'Contrast 0002'
+      - 'Contrast 0003'
+      - 'Contrast 0004'
+      - 'Contrast 0005'
+      - 'Contrast 0006'
+      - 'Contrast 0007'
+      - 'Contrast 0010'
+      - 'Contrast 0012'
+      - 'Contrast 0014'
     group:
-      - 'Emotional Face Matching'
-      - 'Emotional Face Matching'
-      - 'Emotional Face Matching'
-      - 'Emotional Face Matching (Gender)'
-      - 'Emotional Face Matching (Gender)'
-      - 'Emotional Face Matching (Site)'
-      - 'Emotional Face Matching (Site)'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
+      - 'Task fMRI'
     skip: False
