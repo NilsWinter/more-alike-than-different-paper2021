@@ -1,6 +1,6 @@
-# More Alike Than Different - Quantifying Deviations of Brain Structure and Function in Major Depressive Disorder across Neuroimaging Modalities
+# Quantifying Deviations of Brain Structure and Function in Major Depressive Disorder across Neuroimaging Modalities
 
-This repo contains all scripts necessary to the analyses of our currently submitted manuscript on differences between healthy and depressed 
+This repo contains all scripts necessary for the analyses of our currently submitted manuscript on differences between healthy and depressed 
 individuals in multiple neuroimaging modalities.
 
 ## Dependencies
